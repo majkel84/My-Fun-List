@@ -8,6 +8,8 @@ Item::Item(const std::string & title,
     genere_(genere)
 {}
 
+Item::~Item() {}
+
 std::string Item::getTitle() const
 {
     return title_;
@@ -17,3 +19,5 @@ unsigned short Item::getYear() const
 {
     return year_;
 }
+
+std::string Item::getInfo() const {return 0;}
