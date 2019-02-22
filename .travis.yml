@@ -17,4 +17,4 @@ script:
   - cd build
   - cmake ..
   - make   
-  - ./Private_List
+  - ./My-Fun-List
