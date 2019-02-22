@@ -17,4 +17,4 @@ script:
   - cd build
   - cmake ..
   - make   
-  - ./My-Fun-List
+  - ./MyFunList
