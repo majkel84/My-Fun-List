@@ -43,13 +43,15 @@ set(CMAKE_CXX_FLAGS "-g -O0")
 
 set(SRC_LIST
     src/Item.cpp
-   src/Item.hpp
+    src/Item.hpp
     src/Book.cpp
     src/Book.hpp
     src/Movie.cpp
     src/Movie.hpp
     src/Anime.cpp
     src/Anime.hpp
+    src/DataBase.hpp
+    src/DataBase.cpp
     )
 
 include_directories(src)

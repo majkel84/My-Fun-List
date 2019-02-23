@@ -12,7 +12,6 @@ class Movie : public Item
             const std::string & mainCharacter);
 
         std::string getDirector() const;
-        std::string getPublisher() const;
         std::string getMainCharacter() const;
         std::string getInfo() const;
 

@@ -1,4 +1,5 @@
-#include <Movie.hpp>
+#include <vector>
+#include "Movie.hpp"
 
 class Anime : public Movie
 {
@@ -9,10 +10,11 @@ public:
           const std::string & director,
           const std::string & mainCharacter,
           const std::string & studio,
-          const std::vecotr<int> & noEpisodes);
+          const std::vector<int> & noEpisodes);
 
     std::string getStudio() const;
     std::vector<int> getNoEpisodes() const;
+    std::string getInfo() const;
 
 private:
     std::string studio_;
