@@ -28,7 +28,7 @@ public:
     itemIter searchByDirector() const;
     itemIter searchByStudio() const;
     void addItem(itemPtr item);
-    bool modifyNoEpisodes(const std::string & title, const std::vecor<int> & newNoEpisodes);
+    bool modifyNoEpisodes(const std::string & title, const std::vector<int> & newNoEpisodes);
 
     bool addBook(const std::string & title,
                  const unsigned int & year,
