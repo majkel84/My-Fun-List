@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include <memory>
+#include <algorithm>
 #include "Item.hpp"
 #include "Book.hpp"
 #include "Movie.hpp"
@@ -51,5 +52,5 @@ public:
                   const std::vector<int> & noEpisodes);
 
 private:
-    std::vector<itemPtr> data {};
+    std::vector<itemPtr> data_ {};
 };

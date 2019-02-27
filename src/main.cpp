@@ -1,7 +1,11 @@
 #include <iostream>
+#include "DataBase.hpp"
 
 int main()
 {
-    std::cout << "Hello my list" << std::endl;
+    DataBase db;
+
+    db.printDataBase();
+
     return 0;
 }
