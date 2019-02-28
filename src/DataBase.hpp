@@ -18,11 +18,11 @@ class DataBase
 {
 public:
     void printDataBase() const;
-    void sortByTitle() const;
-    void sortByYear() const;
-    void sortByAuthor() const;
-    void sortByDirector() const;
-    void sortByStudio() const;
+    void sortByTitle();
+    void sortByYear();
+    void sortByAuthor();
+    void sortByDirector();
+    void sortByStudio();
     itemIter searchByTitle() const;
     itemIter searchByYear() const;
     itemIter searchByAuthor() const;
