@@ -9,7 +9,7 @@ class Item
     public:
         Item(const std::string & title,
             const unsigned short & year,
-            const Genere & genere);
+            const Genere &genere);
 
         unsigned short getYear() const;
         std::string getTitle() const;
