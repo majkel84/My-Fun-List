@@ -1,3 +1,4 @@
+#pragma once
 #include <map>
 
 enum class Genere : char {
@@ -26,7 +27,7 @@ template<> const char convMap<Genere::adventure>[] = "Adveture";
 template<> const char convMap<Genere::fantasy>[] = "Fantasy";
 */
 
-const char* convMap (Genere cts)
+inline const char* convMap (Genere cts)
 {
     const std::map<Genere,const char*> GenereToString {
         { Genere::action, "Action" },
@@ -46,6 +47,7 @@ const char* convMap (Genere cts)
         { Genere::war, "War" },
         { Genere::western, "Western" }
     };
-    auto   it  = GenereToString.find(cts);
+    auto it  = GenereToString.find(cts);
     return it == GenereToString.end() ? "Out of range" : it->second;
 }
+
