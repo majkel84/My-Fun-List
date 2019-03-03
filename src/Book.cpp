@@ -20,4 +20,13 @@ std::string Book::getPublisher() const
     return publisher_;
 }
 
-std::string Book::getInfo() const {return 0;}
+std::string Book::getInfo() const
+{
+    auto ss = std::stringstream{};
+    ss << std::left << std::setw(13) << title_ << " "
+       << std::left << std::setw(13) << year_ << " "
+       << std::left << std::setw(13) << convMap(genere_) << " "
+       << std::left << std::setw(13) << author_ << " "
+       << std::left << std::setw(13) << publisher_ << "\n";
+    return ss.str();
+}

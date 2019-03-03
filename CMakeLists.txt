@@ -52,6 +52,7 @@ set(SRC_LIST
     src/Anime.hpp
     src/DataBase.hpp
     src/DataBase.cpp
+    src/Genere.hpp
     )
 
 include_directories(src)

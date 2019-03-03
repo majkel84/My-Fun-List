@@ -1,8 +1,8 @@
 #pragma once
 #include <iostream>
 #include <string>
-
-enum class Genere {action, adventure, anime, biographical, detective, documentary, drama, family, fantasy, historical, horror, musical, romantic, sf, thriller, war, western};
+#include <iomanip>
+#include "Genere.hpp"
 
 class Item
 {
@@ -14,6 +14,7 @@ class Item
         unsigned short getYear() const;
         std::string getTitle() const;
         virtual std::string getInfo() const;
+        //char enumToString(Genere ets);
 
         virtual ~Item();
 
