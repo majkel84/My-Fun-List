@@ -67,7 +67,7 @@ else (UNIX)
 endif (UNIX)
 
 set(TEST_SRC_LIST
-    test/Items.cpp
+    test/TestItems.cpp
     test/test_main.cpp
 )
 
