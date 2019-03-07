@@ -28,8 +28,8 @@ std::string Item::getInfo() const {
     return ss.str();
 }
 
-std::ostream& operator<<(std::ostream os, Item * item)
+std::ostream& operator<<(std::ostream& os, Item& item)
 {
-    os << item ->getInfo();
+    os << item.getInfo();
     return os;
 }

@@ -2,6 +2,8 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include <memory>
+#include <sstream>
 #include "Genere.hpp"
 
 class Item
@@ -14,6 +16,7 @@ class Item
         unsigned short getYear() const;
         std::string getTitle() const;
         virtual std::string getInfo() const;
+        friend std::ostream& operator<<(std::ostream& os, Item& item);
         //char enumToString(Genere ets);
 
         virtual ~Item();

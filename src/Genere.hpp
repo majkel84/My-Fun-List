@@ -1,5 +1,6 @@
 #pragma once
 #include <map>
+#include <memory>
 
 enum class Genere : char {
     action,
@@ -20,12 +21,6 @@ enum class Genere : char {
     war,
     western
 };
-
-/*template<Genere> const char convMap[] = "Invalid ctegory";
-template<> const char convMap<Genere::action>[] = "Action";
-template<> const char convMap<Genere::adventure>[] = "Adveture";
-template<> const char convMap<Genere::fantasy>[] = "Fantasy";
-*/
 
 inline const char* convMap (Genere cts)
 {

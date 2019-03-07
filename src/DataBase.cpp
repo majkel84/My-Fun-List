@@ -21,7 +21,7 @@ void DataBase::printDataBase() const
     if (data_.empty())
         std::cout << "Database empty." << "\n";
     for (const auto & itemPtr : data_)
-        std::cout << itemPtr;
+        std::cout << *itemPtr;
     std::cout << "\n";
 }
 
