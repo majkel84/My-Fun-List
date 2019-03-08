@@ -16,6 +16,30 @@ bool DataBase::addBook(const std::string & title,
     return true;
 }
 
+bool DataBase::addMovie(const std::string & title,
+                        const unsigned int & year,
+                        const Genere & genere,
+                        const std::string & director,
+                        const std::string & mainCharacter)
+{
+    itemPtr movie = std::make_shared<Movie>(title, year, genere, director, mainCharacter);
+    addItem(movie);
+    return true;
+}
+
+bool DataBase::addAnime(const std::string & title,
+              const unsigned int & year,
+              const Genere & genere,
+              const std::string & director,
+              const std::string & mainCharacter,
+              const std::string & studio,
+              const unsigned int &noEpisodes)
+{
+    itemPtr anime = std::make_shared<Anime>(title, year, genere, director, mainCharacter, studio, noEpisodes);
+    addItem(anime);
+    return true;
+}
+
 void DataBase::printDataBase() const
 {
     if (data_.empty())

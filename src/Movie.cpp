@@ -20,4 +20,13 @@ std::string Movie::getMainCharacter() const
     return mainCharacter_;
 }
 
-std::string Movie::getInfo() const {return 0;}
+std::string Movie::getInfo() const
+{
+    auto ss = std::stringstream{};
+    ss << std::left << std::setw(13) << title_ << " "
+       << std::left << std::setw(13) << year_ << " "
+       << std::left << std::setw(13) << convMap(genere_) << " "
+       << std::left << std::setw(13) << director_ << " "
+       << std::left << std::setw(13) << mainCharacter_ << "\n";
+    return ss.str();
+}

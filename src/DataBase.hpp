@@ -34,7 +34,7 @@ public:
                   const std::string & director,
                   const std::string & mainCharacter,
                   const std::string & studio,
-                  const std::vector<int> & noEpisodes);
+                  const unsigned int & noEpisodes);
 
     void printDataBase() const;
     void sortByTitle();

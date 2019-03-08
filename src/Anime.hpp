@@ -11,13 +11,13 @@ public:
           const std::string & director,
           const std::string & mainCharacter,
           const std::string & studio,
-          const std::vector<int> & noEpisodes);
+          const unsigned int &noEpisodes);
 
     std::string getStudio() const;
-    std::vector<int> getNoEpisodes() const;
+    unsigned int getNoEpisodes() const;
     std::string getInfo() const;
 
 private:
     std::string studio_;
-    std::vector<int> noEpisodes_;
+    unsigned int noEpisodes_;
 };
