@@ -18,3 +18,10 @@ script:
   - cmake ..
   - make   
   - ./MyFunList
+
+after_success:
+  - cd ${TRAVIS_BUILD_DIR}
+  - lcov --directory . --capture --output-file coverage.in
+  - lcov --remove coverage.info '/user/*' --output-file coverage.info
+  - lcov --list coverage.info
+  - bash <(curl -s https://codecov.io/bash) || echo "Codecov did not collect coverage reports"
