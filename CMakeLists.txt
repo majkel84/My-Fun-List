@@ -39,7 +39,7 @@ project(MyFunList)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
-set(CMAKE_CXX_FLAGS "-g -O0")
+set(CMAKE_CXX_FLAGS "-g -O0 --coverage")
 
 set(SRC_LIST
     src/Item.cpp
