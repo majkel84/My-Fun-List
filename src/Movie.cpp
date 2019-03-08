@@ -10,16 +10,6 @@ Movie::Movie(const std::string & title,
     mainCharacter_(mainCharacter)
 {}
 
-std::string Movie::getDirector() const
-{
-    return director_;
-}
-
-std::string Movie::getMainCharacter() const
-{
-    return mainCharacter_;
-}
-
 std::string Movie::getInfo() const
 {
     auto ss = std::stringstream{};

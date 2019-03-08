@@ -12,11 +12,9 @@ class Movie : public Item
             const std::string & director,
             const std::string & mainCharacter);
 
-        std::string getDirector() const;
-        std::string getMainCharacter() const;
         std::string getInfo() const;
 
-    private:
+    protected:
         std::string director_;
         std::string mainCharacter_;
 };
