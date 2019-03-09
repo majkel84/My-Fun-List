@@ -15,11 +15,11 @@ Anime::Anime(const std::string & title,
 std::string Anime::getInfo() const
 {
     auto ss = std::stringstream{};
-    ss << std::left << std::setw(13) << title_ << " "
-       << std::left << std::setw(13) << year_ << " "
-       << std::left << std::setw(13) << convMap(genere_) << " "
-       << std::left << std::setw(13) << director_ << " "
-       << std::left << std::setw(13) << mainCharacter_ << " "
+    ss << std::left << std::setw(13) << Item::getTitle() << " "
+       << std::left << std::setw(13) << Item::getYear() << " "
+       << std::left << std::setw(13) << convMap(Item::getGenere()) << " "
+       << std::left << std::setw(13) << Movie::getDirector() << " "
+       << std::left << std::setw(13) << Movie::getMainCharacter() << " "
        << std::left << std::setw(13) << studio_ << " "
        << std::left << std::setw(13) << noEpisodes_ << "\n";
     return ss.str();
