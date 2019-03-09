@@ -15,13 +15,13 @@ class Item
 
         unsigned short getYear() const;
         std::string getTitle() const;
+        Genere getGenere() const;
         virtual std::string getInfo() const;
         friend std::ostream& operator<<(std::ostream& os, Item& item);
-        //char enumToString(Genere ets);
 
         virtual ~Item();
 
-    protected:
+    private:
         std::string title_;
         unsigned short year_;
         Genere genere_;
