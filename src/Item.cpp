@@ -32,3 +32,10 @@ std::ostream& operator<<(std::ostream& os, Item& item)
     os << item.getInfo();
     return os;
 }
+
+std::ostream& operator<<(std::ostream& os, Item* item)
+{
+    os << item -> getInfo();
+    return os;
+}
+

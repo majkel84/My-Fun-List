@@ -18,6 +18,7 @@ class Item
         Genere getGenere() const;
         virtual std::string getInfo() const;
         friend std::ostream& operator<<(std::ostream& os, Item& item);
+        friend std::ostream& operator<<(std::ostream& os, Item* item);
 
         virtual ~Item();
 

@@ -23,7 +23,7 @@ std::string Movie::getMainCharacter() const
 std::string Movie::getInfo() const
 {
     auto ss = std::stringstream{};
-    ss << std::left << std::setw(13) << Item::getTitle() << " "
+    ss << std::left << std::setw(17) << Item::getTitle() << " "
        << std::left << std::setw(13) << Item::getYear() << " "
        << std::left << std::setw(13) << convMap(Item::getGenere()) << " "
        << std::left << std::setw(13) << director_ << " "

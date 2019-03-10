@@ -66,3 +66,27 @@ void DataBase::sortByYear()
         return lhs -> getYear() < rhs -> getYear();
     });
 }
+
+itemIter DataBase::searchByTitle(const std::string& title)
+{
+    auto it = std::find_if(data_.begin(), data_.end(), [&title](itemPtr item){
+        return item -> getTitle() == title;
+    });
+    if (it != data_.end())
+        std::cout << *it << "\n";
+    else
+        std::cout << "Title " << title << " not found" << "\n";
+    return it;
+}
+
+itemIter DataBase::searchByYear(const unsigned int &year)
+{
+    auto it = std::find_if(data_.begin(), data_.end(), [&year](itemPtr item){
+        return item -> getYear() == year;
+    });
+    if (it != data_.end())
+        std::cout << *it << "\n";
+    else
+        std::cout << "Year " << year << " not found" << "\n";
+    return it;
+}

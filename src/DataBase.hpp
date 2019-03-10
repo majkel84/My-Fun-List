@@ -42,11 +42,11 @@ public:
     //void sortByAuthor();
     //void sortByDirector();
     //void sortByStudio();
-    //itemIter searchByTitle() const;
-    //itemIter searchByYear() const;
-    //itemIter searchByAuthor() const;
-    //itemIter searchByDirector() const;
-    //itemIter searchByStudio() const;
+    itemIter searchByTitle(const std::string& title);
+    itemIter searchByYear(const unsigned int& year);
+    //itemIter searchByAuthor();
+    //itemIter searchByDirector();
+    //itemIter searchByStudio();
     //bool modifyNoEpisodes(const std::string & title, const std::vector<int> & newNoEpisodes);
 
 private:
