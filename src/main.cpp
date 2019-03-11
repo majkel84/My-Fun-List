@@ -14,6 +14,8 @@ int main()
     db.printDataBase();
     db.searchByTitle("Alien");
     db.searchByYear(1988);
+    db.searchByAuthor("Ziemianski Andrzej");
+    db.searchByPublisher("Publisher");
 
     return 0;
 }

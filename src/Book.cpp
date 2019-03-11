@@ -10,6 +10,15 @@ Book::Book(const std::string & title,
     publisher_(publisher)
 {}
 
+std::string Book::getAuthor() const
+{
+    return author_;
+}
+std::string Book::getPublisher() const
+{
+    return publisher_;
+}
+
 std::string Book::getInfo() const
 {
     auto ss = std::stringstream{};

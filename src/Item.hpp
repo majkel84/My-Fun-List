@@ -17,6 +17,8 @@ class Item
         std::string getTitle() const;
         Genere getGenere() const;
         virtual std::string getInfo() const;
+        virtual std::string getAuthor() const;
+        virtual std::string getPublisher() const;
         friend std::ostream& operator<<(std::ostream& os, Item& item);
         friend std::ostream& operator<<(std::ostream& os, Item* item);
 

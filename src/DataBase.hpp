@@ -44,7 +44,8 @@ public:
     //void sortByStudio();
     itemIter searchByTitle(const std::string& title);
     itemIter searchByYear(const unsigned int& year);
-    //itemIter searchByAuthor();
+    itemIter searchByAuthor(const std::string& author);
+    itemIter searchByPublisher(const std::string& publisher);
     //itemIter searchByDirector();
     //itemIter searchByStudio();
     //bool modifyNoEpisodes(const std::string & title, const std::vector<int> & newNoEpisodes);

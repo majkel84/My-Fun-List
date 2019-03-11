@@ -25,6 +25,9 @@ Genere Item::getGenere() const
     return genere_;
 }
 
+std::string Item::getAuthor() const {return "0";}
+std::string Item::getPublisher() const {return "0";}
+
 std::string Item::getInfo() const {}
 
 std::ostream& operator<<(std::ostream& os, Item& item)

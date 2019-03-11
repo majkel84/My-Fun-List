@@ -90,3 +90,27 @@ itemIter DataBase::searchByYear(const unsigned int &year)
         std::cout << "Year " << year << " not found" << "\n";
     return it;
 }
+
+itemIter DataBase::searchByAuthor(const std::string& author)
+{
+    auto it = std::find_if(data_.begin(), data_.end(), [&author](itemPtr item){
+            return item -> getAuthor() == author;
+    });
+    if (it != data_.end())
+        std::cout << *it << "\n";
+    else
+        std::cout << "Author " << author << " not found" << "\n";
+    return it;
+}
+
+itemIter DataBase::searchByPublisher(const std::string& publisher)
+{
+    auto it = std::find_if(data_.begin(), data_.end(), [&publisher](itemPtr item){
+            return item -> getPublisher() == publisher;
+    });
+    if (it != data_.end())
+        std::cout << *it << "\n";
+    else
+        std::cout << "Publisher " << publisher << " not found" << "\n";
+    return it;
+}

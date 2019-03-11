@@ -12,6 +12,8 @@ class Book : public Item
             const std::string & author,
             const std::string & publisher);
 
+        std::string getAuthor() const;
+        std::string getPublisher() const;
         std::string getInfo() const;
 
     private:
