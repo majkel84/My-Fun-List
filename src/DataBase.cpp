@@ -114,3 +114,15 @@ itemIter DataBase::searchByPublisher(const std::string& publisher)
         std::cout << "Publisher " << publisher << " not found" << "\n";
     return it;
 }
+
+itemIter DataBase::searchByDirector(const std::string& director)
+{
+    auto it = std::find_if(data_.begin(), data_.end(), [&director](itemPtr item){
+            return item -> getDirector() == director;
+    });
+    if (it != data_.end())
+        std::cout << *it << "\n";
+    else
+        std::cout << "Director " << director << " not found" << "\n";
+    return it;
+}

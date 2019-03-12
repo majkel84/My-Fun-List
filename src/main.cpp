@@ -16,6 +16,7 @@ int main()
     db.searchByYear(1988);
     db.searchByAuthor("Ziemianski Andrzej");
     db.searchByPublisher("Publisher");
+    db.searchByDirector("Ridley Scott");
 
     return 0;
 }
