@@ -47,7 +47,7 @@ public:
     itemIter searchByAuthor(const std::string& author);
     itemIter searchByPublisher(const std::string& publisher);
     itemIter searchByDirector(const std::string& director);
-    //itemIter searchByStudio();
+    itemIter searchByStudio(const std::string& studio);
     //bool modifyNoEpisodes(const std::string & title, const std::vector<int> & newNoEpisodes);
 
 private:

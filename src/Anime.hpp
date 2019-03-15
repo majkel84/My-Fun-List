@@ -13,6 +13,7 @@ public:
           const std::string & studio,
           const unsigned int &noEpisodes);
 
+    std::string getStudio() const;
     std::string getInfo() const;
 
 private:

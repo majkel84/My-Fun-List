@@ -17,6 +17,7 @@ int main()
     db.searchByAuthor("Ziemianski Andrzej");
     db.searchByPublisher("Publisher");
     db.searchByDirector("Ridley Scott");
+    db.searchByStudio("Ghibli");
 
     return 0;
 }

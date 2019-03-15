@@ -20,6 +20,7 @@ class Item
         virtual std::string getAuthor() const;
         virtual std::string getPublisher() const;
         virtual std::string getDirector() const;
+        virtual std::string getStudio() const;
         friend std::ostream& operator<<(std::ostream& os, Item& item);
         friend std::ostream& operator<<(std::ostream& os, Item* item);
 

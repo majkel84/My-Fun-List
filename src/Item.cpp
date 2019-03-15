@@ -28,6 +28,7 @@ Genere Item::getGenere() const
 std::string Item::getAuthor() const {return "0";}
 std::string Item::getPublisher() const {return "0";}
 std::string Item::getDirector() const {return "0";}
+std::string Item::getStudio() const {return "0";}
 
 std::string Item::getInfo() const {}
 

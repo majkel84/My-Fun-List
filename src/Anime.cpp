@@ -12,6 +12,11 @@ Anime::Anime(const std::string & title,
     noEpisodes_(noEpisodes)
 {}
 
+std::string Anime::getStudio() const
+{
+    return studio_;
+}
+
 std::string Anime::getInfo() const
 {
     auto ss = std::stringstream{};

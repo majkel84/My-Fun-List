@@ -126,3 +126,15 @@ itemIter DataBase::searchByDirector(const std::string& director)
         std::cout << "Director " << director << " not found" << "\n";
     return it;
 }
+
+itemIter DataBase::searchByStudio(const std::string &studio)
+{
+    auto it = std::find_if(data_.begin(), data_.end(), [&studio](itemPtr item){
+            return item -> getStudio() == studio;
+    });
+    if (it != data_.end())
+        std::cout << *it << "\n";
+    else
+        std::cout << "Studio " << studio << " not found" << "\n";
+    return it;
+}
