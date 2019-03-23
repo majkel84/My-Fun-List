@@ -21,6 +21,8 @@ int main()
     db.searchByStudio("Ghibli");
     db.sortByDirector();
     db.printDataBase();
+    db.sortByAuthor();
+    db.printDataBase();
 
     return 0;
 }

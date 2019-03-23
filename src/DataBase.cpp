@@ -149,3 +149,14 @@ void DataBase::sortByDirector()
         return lhs -> getDirector() < rhs ->getDirector();
     });
 }
+
+void DataBase::sortByAuthor()
+{
+    std::sort(data_.begin(), data_.end(), [](itemPtr lhs, itemPtr rhs){
+         if (lhs -> getAuthor() == "0")
+             return false;
+         if (rhs -> getAuthor() == "0")
+             return true;
+        return lhs -> getAuthor() < rhs ->getAuthor();
+    });
+}

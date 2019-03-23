@@ -41,7 +41,7 @@ public:
     void printDataBase() const;
     void sortByTitle();
     void sortByYear();
-    //void sortByAuthor();
+    void sortByAuthor();
     void sortByDirector();
     //void sortByStudio();
     itemIter searchByTitle(const std::string& title);
