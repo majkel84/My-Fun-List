@@ -3,6 +3,8 @@
 #include <vector>
 #include <memory>
 #include <algorithm>
+#include <cctype>
+#include <iterator>
 #include "Item.hpp"
 #include "Book.hpp"
 #include "Movie.hpp"
@@ -40,7 +42,7 @@ public:
     void sortByTitle();
     void sortByYear();
     //void sortByAuthor();
-    //void sortByDirector();
+    void sortByDirector();
     //void sortByStudio();
     itemIter searchByTitle(const std::string& title);
     itemIter searchByYear(const unsigned int& year);

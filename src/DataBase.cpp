@@ -138,3 +138,14 @@ itemIter DataBase::searchByStudio(const std::string &studio)
         std::cout << "Studio " << studio << " not found" << "\n";
     return it;
 }
+
+void DataBase::sortByDirector()
+{
+    std::sort(data_.begin(), data_.end(), [](itemPtr lhs, itemPtr rhs){
+         if (lhs -> getDirector() == "0")
+             return false;
+         if (rhs -> getDirector() == "0")
+             return true;
+        return lhs -> getDirector() < rhs ->getDirector();
+    });
+}

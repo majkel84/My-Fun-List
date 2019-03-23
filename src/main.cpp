@@ -3,6 +3,7 @@
 int main()
 {
     DataBase db;
+    db.addMovie("Infiltration", 2015, Genere::thriller, "Martin Scorsese", "Leonardo di Caprio");
     db.addBook("Achaja", 2000, Genere::fantasy, "Ziemianski Andrzej", "Publisher");
     db.addBook("Achaja2", 2001, Genere::fantasy, "Ziemianski Andrzej", "Publisher");
     db.addMovie("Alien", 1979, Genere::sf, "Ridley Scott", "Sigourney Weaver");
@@ -18,6 +19,8 @@ int main()
     db.searchByPublisher("Publisher");
     db.searchByDirector("Ridley Scott");
     db.searchByStudio("Ghibli");
+    db.sortByDirector();
+    db.printDataBase();
 
     return 0;
 }
