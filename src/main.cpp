@@ -23,6 +23,8 @@ int main()
     db.printDataBase();
     db.sortByAuthor();
     db.printDataBase();
+    db.sortByStudio();
+    db.printDataBase();
 
     return 0;
 }

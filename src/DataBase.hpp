@@ -43,7 +43,7 @@ public:
     void sortByYear();
     void sortByAuthor();
     void sortByDirector();
-    //void sortByStudio();
+    void sortByStudio();
     itemIter searchByTitle(const std::string& title);
     itemIter searchByYear(const unsigned int& year);
     itemIter searchByAuthor(const std::string& author);

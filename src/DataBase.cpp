@@ -160,3 +160,14 @@ void DataBase::sortByAuthor()
         return lhs -> getAuthor() < rhs ->getAuthor();
     });
 }
+
+void DataBase::sortByStudio()
+{
+    std::sort(data_.begin(), data_.end(), [](itemPtr lhs, itemPtr rhs){
+         if (lhs -> getStudio() == "0")
+             return false;
+         if (rhs -> getStudio() == "0")
+             return true;
+        return lhs -> getStudio() < rhs ->getStudio();
+    });
+}
