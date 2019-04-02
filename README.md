@@ -4,8 +4,15 @@
 [![codecov](https://codecov.io/gh/majkel84/MyFunList/branch/master/graph/badge.svg)](https://codecov.io/gh/majkel84/MyFunList)
 
 
-Database consisting of:
+## Database consisting of:
 Items and it dependacies
     Books
     Movies with another dependancies
         Anime
+
+## Used methods
+Polimorphism
+Inheritance
+Lambdas
+Algorithms
+Containers
