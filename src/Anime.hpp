@@ -15,6 +15,7 @@ public:
 
     std::string getStudio() const;
     std::string getInfo() const;
+    void setNoEpisodes(const unsigned int &episodes);
 
 private:
     std::string studio_;

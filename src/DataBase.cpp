@@ -171,3 +171,12 @@ void DataBase::sortByStudio()
         return lhs -> getStudio() < rhs ->getStudio();
     });
 }
+
+void DataBase::modifyNoEpisodes(const std::string& title, const unsigned int& newNoEpisodes)
+{
+    itemIter it = searchByTitle(title);
+    if (it != data_.end())
+    {
+        (*it) -> setNoEpisodes(newNoEpisodes);
+    }
+}

@@ -21,6 +21,7 @@ class Item
         virtual std::string getPublisher() const;
         virtual std::string getDirector() const;
         virtual std::string getStudio() const;
+        virtual void setNoEpisodes(const unsigned int&) {};
         friend std::ostream& operator<<(std::ostream& os, Item& item);
         friend std::ostream& operator<<(std::ostream& os, Item* item);
 

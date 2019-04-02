@@ -17,6 +17,11 @@ std::string Anime::getStudio() const
     return studio_;
 }
 
+void Anime::setNoEpisodes(const unsigned int& episodes)
+{
+    noEpisodes_ = episodes;
+}
+
 std::string Anime::getInfo() const
 {
     auto ss = std::stringstream{};
