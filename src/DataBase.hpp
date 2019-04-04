@@ -5,6 +5,7 @@
 #include <algorithm>
 #include <cctype>
 #include <iterator>
+#include <fstream>
 #include "Item.hpp"
 #include "Book.hpp"
 #include "Movie.hpp"
@@ -51,6 +52,7 @@ public:
     itemIter searchByDirector(const std::string& director);
     itemIter searchByStudio(const std::string& studio);
     void modifyNoEpisodes(const std::string & title, const unsigned int& newNoEpisodes);
+    bool saveToFile(const std::string& fileName = "database.txt");
 
 private:
     std::vector<itemPtr> data_ {};

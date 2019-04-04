@@ -26,6 +26,7 @@ int main()
     db.sortByStudio();
     db.modifyNoEpisodes("My Fiend Totoro", 2);
     db.printDataBase();
+    db.saveToFile();
 
     return 0;
 }

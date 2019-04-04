@@ -180,3 +180,19 @@ void DataBase::modifyNoEpisodes(const std::string& title, const unsigned int& ne
         (*it) -> setNoEpisodes(newNoEpisodes);
     }
 }
+
+bool DataBase::saveToFile(const std::string& fileName)
+{
+    std::ofstream os {fileName};
+    if (!os)
+    {
+        std::cout << "Couldn't open file " << fileName << '\n';
+        return false;
+    }
+
+    for (const auto& itemPtr: data_)
+        os << itemPtr;
+    os << '\n';
+    os.close();
+    return true;
+}
