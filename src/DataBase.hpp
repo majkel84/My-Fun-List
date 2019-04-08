@@ -53,6 +53,7 @@ public:
     itemIter searchByStudio(const std::string& studio);
     void modifyNoEpisodes(const std::string & title, const unsigned int& newNoEpisodes);
     bool saveToFile(const std::string& fileName = "database.txt");
+    bool loadFromFile(const std::string& fileName = "database.txt");
 
 private:
     std::vector<itemPtr> data_ {};

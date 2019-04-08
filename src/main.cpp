@@ -27,6 +27,9 @@ int main()
     db.modifyNoEpisodes("My Fiend Totoro", 2);
     db.printDataBase();
     db.saveToFile();
+    DataBase db2;
+    db2.loadFromFile();
+    db2.printDataBase();
 
     return 0;
 }

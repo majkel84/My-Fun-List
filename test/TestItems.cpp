@@ -26,3 +26,8 @@ TEST_F(TestItems, checkSaveToFile)
     db.addAnime("My Fiend Totoro", 1988, Genere::anime, "Hayao Miyazaki", "Totoro", "Ghibli", 1);
     ASSERT_TRUE(db.saveToFile());
 }
+
+TEST_F(TestItems, checkLoadFile)
+{
+    ASSERT_TRUE(db.loadFromFile());
+}

@@ -196,3 +196,33 @@ bool DataBase::saveToFile(const std::string& fileName)
     os.close();
     return true;
 }
+
+bool DataBase::loadFromFile(const std::string &fileName)
+{
+    std::ifstream is {fileName};
+    if (!is)
+    {
+        std::cout << "Couldt' open file " << fileName << '\n';
+        return false;
+    }
+
+    std::string title, genere, author, publisher, director, mainCh, studio;
+    Genere gen;
+    unsigned short year;
+    unsigned int noEpisodes;
+
+    while (is >> title >> year >> genere >> author >> publisher
+          >> director >> mainCh >> studio >> noEpisodes)
+    {
+        if (publisher != "0")
+            addBook(title, year, gen, author, publisher);
+        else if (director != "0" && studio == "0")
+            addMovie(title, year, gen, director, mainCh);
+        else if (studio != "0")
+            addAnime(title, year, gen, director, mainCh, studio, noEpisodes);
+        else
+            std::cout << "Sth is wrong with db " << '\n';
+    }
+
+    return true;
+}
