@@ -207,19 +207,20 @@ bool DataBase::loadFromFile(const std::string &fileName)
     }
 
     std::string title, genere, author, publisher, director, mainCh, studio;
-    Genere gen;
+    char* gen;
     unsigned short year;
     unsigned int noEpisodes;
 
-    while (is >> title >> year >> genere >> author >> publisher
+    while (is >> title >> year >> gen >> author >> publisher
           >> director >> mainCh >> studio >> noEpisodes)
     {
+        std::cout << "loaded db" << '\n';
         if (publisher != "0")
-            addBook(title, year, gen, author, publisher);
+            addBook(title, year, convBackMap(gen), author, publisher);
         else if (director != "0" && studio == "0")
-            addMovie(title, year, gen, director, mainCh);
+            addMovie(title, year, convBackMap(gen), director, mainCh);
         else if (studio != "0")
-            addAnime(title, year, gen, director, mainCh, studio, noEpisodes);
+            addAnime(title, year, convBackMap(gen), director, mainCh, studio, noEpisodes);
         else
             std::cout << "Sth is wrong with db " << '\n';
     }
