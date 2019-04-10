@@ -48,9 +48,9 @@ inline const char* convMap (Genere cts)
     return it == GenereToString.end() ? "Out of range" : it->second;
 }
 
-inline Genere convBackMap (const char* cts)
+inline Genere convBackMap (std::string cts)
 {
-    const std::map<const char*, Genere> StringToGenere {
+    const std::map<std::string, Genere> StringToGenere {
         { "Action", Genere::action },
         { "Anime", Genere::anime},
         { "Bigraphical", Genere::biographical },

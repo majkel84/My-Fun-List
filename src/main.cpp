@@ -8,7 +8,7 @@ int main()
     db.addBook("Achaja2", 2001, Genere::fantasy, "Ziemianski Andrzej", "Publisher");
     db.addMovie("Alien", 1979, Genere::sf, "Ridley Scott", "Sigourney Weaver");
     db.addAnime("My Fiend Totoro", 1988, Genere::anime, "Hayao Miyazaki", "Totoro", "Ghibli", 1);
-    db.printDataBase();
+    /*db.printDataBase();
     db.sortByTitle();
     db.printDataBase();
     db.sortByYear();
@@ -25,7 +25,7 @@ int main()
     db.printDataBase();
     db.sortByStudio();
     db.modifyNoEpisodes("My Fiend Totoro", 2);
-    db.printDataBase();
+    db.printDataBase();*/
     db.saveToFile();
     DataBase db2;
     db2.loadFromFile();

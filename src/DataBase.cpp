@@ -206,24 +206,48 @@ bool DataBase::loadFromFile(const std::string &fileName)
         return false;
     }
 
-    std::string title, genere, author, publisher, director, mainCh, studio;
-    char* gen;
+    std::string title, author, genere, publisher, director, mainCh, studio;
     unsigned short year;
     unsigned int noEpisodes;
+    std::string line;
 
-    while (is >> title >> year >> gen >> author >> publisher
+    while ( getline (is,line) )
+    {
+        is >> title;
+        is >> year;
+        is >> genere;
+        is >> author;
+        is >> publisher;
+        is >> director;
+        is >> mainCh;
+        is >> studio;
+        is >> noEpisodes;
+
+        if (director != "----" && studio == "----")
+            addMovie(title, year, convBackMap(genere), director, mainCh);
+        else if (studio != "----")
+            addAnime(title, year, convBackMap(genere), director, mainCh, studio, noEpisodes);
+        else if (publisher != "----")
+            addBook(title, year, convBackMap(genere), author, publisher);
+        else
+            std::cout << "Sth is wrong with db " << '\n';
+    }
+    is.close();
+
+
+    /*while (is >> title >> year >> genere >> author >> publisher
           >> director >> mainCh >> studio >> noEpisodes)
     {
         std::cout << "loaded db" << '\n';
         if (publisher != "0")
-            addBook(title, year, convBackMap(gen), author, publisher);
+            addBook(title, year, convBackMap(genere), author, publisher);
         else if (director != "0" && studio == "0")
-            addMovie(title, year, convBackMap(gen), director, mainCh);
+            addMovie(title, year, convBackMap(genere), director, mainCh);
         else if (studio != "0")
-            addAnime(title, year, convBackMap(gen), director, mainCh, studio, noEpisodes);
+            addAnime(title, year, convBackMap(genere), director, mainCh, studio, noEpisodes);
         else
             std::cout << "Sth is wrong with db " << '\n';
-    }
+    }*/
 
     return true;
 }
