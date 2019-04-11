@@ -210,18 +210,10 @@ bool DataBase::loadFromFile(const std::string &fileName)
     unsigned short year;
     unsigned int noEpisodes;
     std::string line;
-
     while ( getline (is,line) )
     {
-        is >> title;
-        is >> year;
-        is >> genere;
-        is >> author;
-        is >> publisher;
-        is >> director;
-        is >> mainCh;
-        is >> studio;
-        is >> noEpisodes;
+        std::istringstream stream(line);
+        stream >> title >> year >> genere >> author >> publisher >> director >> mainCh  >> studio  >> noEpisodes;
 
         if (director != "----" && studio == "----")
             addMovie(title, year, convBackMap(genere), director, mainCh);
@@ -233,21 +225,5 @@ bool DataBase::loadFromFile(const std::string &fileName)
             std::cout << "Sth is wrong with db " << '\n';
     }
     is.close();
-
-
-    /*while (is >> title >> year >> genere >> author >> publisher
-          >> director >> mainCh >> studio >> noEpisodes)
-    {
-        std::cout << "loaded db" << '\n';
-        if (publisher != "0")
-            addBook(title, year, convBackMap(genere), author, publisher);
-        else if (director != "0" && studio == "0")
-            addMovie(title, year, convBackMap(genere), director, mainCh);
-        else if (studio != "0")
-            addAnime(title, year, convBackMap(genere), director, mainCh, studio, noEpisodes);
-        else
-            std::cout << "Sth is wrong with db " << '\n';
-    }*/
-
     return true;
 }
